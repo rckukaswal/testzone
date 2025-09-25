@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Executor - My Java Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modern.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Java Logo" onerror="this.src='https://via.placeholder.com/40x40/2c3e50/ffffff?text=J'">
+                <span>My Java Website</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="file-manager.html">File Manager</a>
+                <a href="query-executor.html" class="active">Query Executor</a>
+                <a href="notes-viewer.html">Java Notes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Java Query Executor</h1>
+        
+        <div class="query-interface">
+            <div class="query-form">
+                <div class="form-group">
+                    <label for="queryType">Query Type:</label>
+                    <select id="queryType" onchange="updateQueryTemplate()">
+                        <option value="java">Java Code Execution</option>
+                        <option value="string">String Operations</option>
+                        <option value="array">Array Operations</option>
+                        <option value="collection">Collection Operations</option>
+                        <option value="algorithm">Algorithms</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="queryInput">Enter Your Code:</label>
+                    <textarea id="queryInput" rows="12" placeholder="Enter your Java code or query here..."></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button onclick="executeQuery()" class="btn btn-primary">Execute Code</button>
+                    <button onclick="clearQuery()" class="btn btn-secondary">Clear</button>
+                    <button onclick="loadTemplate()" class="btn btn-info">Load Template</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <h2>Execution Results</h2>
+            <div id="resultsContainer" class="results-container">
+                <div class="result-header">
+                    <span>Output:</span>
+                    <button onclick="clearResults()" class="btn btn-sm">Clear Results</button>
+                </div>
+                <pre id="resultOutput" class="result-output">// Results will appear here...</pre>
+            </div>
+        </div>
+
+        <div class="code-snippets">
+            <h2>Common Code Snippets</h2>
+            <div class="snippets-grid">
+                <div class="snippet-card" onclick="loadSnippet('helloWorld')">
+                    <h4>Hello World</h4>
+                    <p>Basic Java program structure</p>
+                </div>
+                <div class="snippet-card" onclick="loadSnippet('stringReverse')">
+                    <h4>String Reverse</h4>
+                    <p>Reverse a string in Java</p>
+                </div>
+                <div class="snippet-card" onclick="loadSnippet('bubbleSort')">
+                    <h4>Bubble Sort</h4>
+                    <p>Sorting algorithm implementation</p>
+                </div>
+                <div class="snippet-card" onclick="loadSnippet('fileRead')">
+                    <h4>File Reading</h4>
+                    <p>Read file content in Java</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Java Website. All rights reserved.</p>
+    </footer>
+
+    <script src="js/queryExecutor.js"></script>
+</body>
+</html>
