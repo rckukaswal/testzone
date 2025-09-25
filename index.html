@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Java Website - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modern.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Java Logo" onerror="this.src='https://via.placeholder.com/40x40/2c3e50/ffffff?text=J'">
+                <span>My Java Website</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="file-manager.html">File Manager</a>
+                <a href="query-executor.html">Query Executor</a>
+                <a href="notes-viewer.html">Java Notes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Welcome to My Java Website</h1>
+            <p>A comprehensive platform for Java developers to manage files, execute queries, and learn Java concepts.</p>
+            <div class="cta-buttons">
+                <a href="file-manager.html" class="btn btn-primary">Manage Files</a>
+                <a href="query-executor.html" class="btn btn-secondary">Run Queries</a>
+                <a href="notes-viewer.html" class="btn btn-info">View Notes</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📁</div>
+                <h3>Java File Management</h3>
+                <p>Upload, view, and manage your Java files with ease using our intuitive file manager.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Query Execution</h3>
+                <p>Execute various types of queries and see results instantly with our query executor.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Java Notes</h3>
+                <p>Access comprehensive Java learning materials and notes for all skill levels.</p>
+            </div>
+        </section>
+
+        <section class="quick-stats">
+            <h2>Quick Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="totalFiles">0</h3>
+                    <p>Java Files</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="totalNotes">5</h3>
+                    <p>Learning Notes</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="totalQueries">0</h3>
+                    <p>Queries Executed</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Java Website. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
