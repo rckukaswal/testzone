@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Notes - My Java Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modern.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Java Logo" onerror="this.src='https://via.placeholder.com/40x40/2c3e50/ffffff?text=J'">
+                <span>My Java Website</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="file-manager.html">File Manager</a>
+                <a href="query-executor.html">Query Executor</a>
+                <a href="notes-viewer.html" class="active">Java Notes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Java Learning Notes</h1>
+        
+        <div class="notes-container">
+            <div class="notes-sidebar">
+                <h3>Topics</h3>
+                <ul id="notesList">
+                    <li><a href="#" onclick="loadNote('basic-notes')">Java Basics</a></li>
+                    <li><a href="#" onclick="loadNote('oops-notes')">OOP Concepts</a></li>
+                    <li><a href="#" onclick="loadNote('collections-notes')">Collections</a></li>
+                    <li><a href="#" onclick="loadNote('multithreading-notes')">Multithreading</a></li>
+                    <li><a href="#" onclick="loadNote('jdbc-notes')">JDBC</a></li>
+                    <li><a href="#" onclick="loadNote('exception-notes')">Exception Handling</a></li>
+                    <li><a href="#" onclick="loadNote('io-notes')">I/O Operations</a></li>
+                    <li><a href="#" onclick="loadNote('design-patterns')">Design Patterns</a></li>
+                </ul>
+            </div>
+            
+            <div class="notes-content">
+                <div class="notes-header">
+                    <h2 id="noteTitle">Select a topic to view notes</h2>
+                    <div class="notes-actions">
+                        <button onclick="toggleDarkMode()" class="btn btn-sm">🌙 Dark Mode</button>
+                        <button onclick="printNotes()" class="btn btn-sm">🖨️ Print</button>
+                    </div>
+                </div>
+                
+                <div id="notesDisplay" class="notes-display">
+                    <div class="welcome-message">
+                        <h3>Welcome to Java Notes!</h3>
+                        <p>Select a topic from the sidebar to start learning Java concepts.</p>
+                        <div class="features-list">
+                            <div class="feature-item">✓ Comprehensive Java tutorials</div>
+                            <div class="feature-item">✓ Code examples and explanations</div>
+                            <div class="feature-item">✓ Best practices and tips</div>
+                            <div class="feature-item">✓ Interview preparation material</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Java Website. All rights reserved.</p>
+    </footer>
+
+    <script src="js/notesViewer.js"></script>
+</body>
+</html>
