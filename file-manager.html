@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager - My Java Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modern.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Java Logo" onerror="this.src='https://via.placeholder.com/40x40/2c3e50/ffffff?text=J'">
+                <span>My Java Website</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="file-manager.html" class="active">File Manager</a>
+                <a href="query-executor.html">Query Executor</a>
+                <a href="notes-viewer.html">Java Notes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Java File Manager</h1>
+        
+        <div class="file-actions">
+            <div class="upload-form">
+                <div class="form-group">
+                    <label for="fileInput">Upload Java File:</label>
+                    <input type="file" id="fileInput" accept=".java" multiple>
+                    <select id="categorySelect">
+                        <option value="controllers">Controllers</option>
+                        <option value="services">Services</option>
+                        <option value="models">Models</option>
+                        <option value="utils">Utilities</option>
+                        <option value="examples">Examples</option>
+                    </select>
+                    <button onclick="uploadFiles()" class="btn btn-primary">Upload Files</button>
+                </div>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search files...">
+                <button onclick="searchFiles()" class="btn btn-secondary">Search</button>
+            </div>
+        </div>
+
+        <div class="file-list">
+            <h2>Java Files <span id="fileCount">(0 files)</span></h2>
+            <div id="fileTableContainer">
+                <table class="file-table">
+                    <thead>
+                        <tr>
+                            <th>Filename</th>
+                            <th>Category</th>
+                            <th>Size</th>
+                            <th>Last Modified</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fileTableBody">
+                        <!-- Files will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="noFilesMessage" class="no-files">
+                <p>No Java files found. Upload some files to get started!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- File Viewer Modal -->
+    <div id="fileModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">File Content</h3>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <pre><code id="fileContent"></code></pre>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="btn btn-secondary">Close</button>
+                <button onclick="downloadCurrentFile()" class="btn btn-primary">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Java Website. All rights reserved.</p>
+    </footer>
+
+    <script src="js/fileManager.js"></script>
+</body>
+</html>
