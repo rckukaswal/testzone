@@ -1,0 +1,27 @@
+Java Basics
+===========
+
+1. Introduction to Java
+   - Platform independent (Write Once, Run Anywhere)
+   - Object-oriented programming language
+   - Robust and secure
+   - Simple and easy to learn
+
+2. Basic Syntax
+   - Classes and Objects
+   - Methods and Variables
+   - Data Types (primitive and reference)
+   - Operators and Expressions
+
+3. Control Structures
+   - If-else statements
+   - Switch statements
+   - Loops (for, while, do-while)
+   - Break and continue statements
+
+4. Example Code:
+   public class HelloWorld {
+       public static void main(String[] args) {
+           System.out.println("Hello, World!");
+       }
+   }
